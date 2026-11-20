@@ -1,0 +1,18 @@
+# TSCD-Net reproduction environment.
+# Python 3.10 is recommended. This torch wheel targets CUDA 12.1.
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+torch==2.5.1+cu121
+transformers==4.57.6
+tokenizers==0.22.2
+sentence-transformers==5.7.0
+numpy==2.2.6
+scipy==1.15.3
+scikit-learn==1.7.2
+beautifulsoup4==4.15.0
+tqdm==4.70.1
+opencc-python-reimplemented==0.1.7
+pytest==8.4.2
+
+-e .
+

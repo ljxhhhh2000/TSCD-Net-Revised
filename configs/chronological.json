@@ -1,0 +1,29 @@
+{
+  "features": {
+    "embedding_model": "E:/Study/pip/cache/models/paraphrase-multilingual-MiniLM-L12-v2",
+    "embedding_device": "cuda"
+  },
+  "model": {
+    "name": "tscdnet_chronological",
+    "model_dim": 32,
+    "time_dim": 16,
+    "attention_heads": 4,
+    "attention_layers": 1,
+    "ffn_multiplier": 2,
+    "chronological_windows": 16
+  },
+  "training": {
+    "runs": 5,
+    "epochs": 30,
+    "batch_size": 128,
+    "learning_rate": 0.002,
+    "weight_decay": 0.0001,
+    "early_stopping_patience": 6,
+    "threshold_strategy": "validation_f1"
+  },
+  "experiment": {
+    "output_dir": "runs/chronological",
+    "artifact_dir": "../../Dataset/TSCD-Net-Features/main",
+    "models": ["tscdnet_chronological"]
+  }
+}
